@@ -12,7 +12,7 @@ K=0;        % variable to hold the geometric multiplicity
 
 for i=1:1000
     [L, Lsym, Lrw, W] = Lmatrix(X1,i*l);
-    if (length(find(eig(Lrw) == 0)) > 0)
+    if (length(find(eig(L) == 0)) > 0)
         l=i*l;
         fprintf('first occurance of l for the eigen value = 0 \n');
         fprintf('%d \n',i*l)
@@ -23,12 +23,12 @@ end
 
 
 [L, Lsym, Lrw, W] = Lmatrix(X1,l);
-[eig_vect,eig_val] = eig(Lrw);
+[eig_vect,eig_val] = eig(L);
 
 %To find the geometric multiplicity we use the following loop
 %(L-lambda*I) => L as lambda =0
 
-K = geoMul(Lrw,0);
+K = geoMul(L,0);
 
 fprintf('intial number of k \n');
 fprintf('%1d \n',K);
@@ -45,7 +45,7 @@ Number_of_clusters = 6;
 %considering the 'k' eigen vectors for clustering
 eig_vect(:,1:K);
 
-init_centroid = centroidInit(Lrw,Number_of_clusters);
+init_centroid = centroidInit(L,Number_of_clusters);
 
 if K<7
     [centroid, clustering,count] = KmeansAlgo(eig_vect,init_centroid,120);
