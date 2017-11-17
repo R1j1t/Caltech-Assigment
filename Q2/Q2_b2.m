@@ -27,8 +27,7 @@ eig_vect(:,1:k_eigenVectors);
 
 init_centroid = centroidInit(L,Number_of_clusters);
 
-[centroid, clustering,count] = KmeansAlgo(eig_vect,init_centroid,100);
-
+[clustering,centroid] = kmeans(eig_vect,Number_of_clusters,'Start','uniform','MaxIter',10000);
 
 fprintf('Final # of cluster\n');
 fprintf('%f \n',size(centroid,1))
@@ -39,8 +38,6 @@ histogram(clustering)
 xlabel('cluster number');
 ylabel('Number of points');
 
-
-sort(count)
 
 
 
