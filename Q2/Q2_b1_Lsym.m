@@ -42,7 +42,13 @@ pause
 %Matrix L has 6 blocks (for l=0.0056)
 Number_of_clusters = 6;
 
-%considering the 'k' eigen vectors for clustering
+%taking biggest eigen values
+%ref:https://scicomp.stackexchange.com/questions/2824/ordering-of-eigenvalues-and-eigenvectors-in-matlab
+[~,indx]=sort(diag(eig_val));
+eig_val=eig_val(indx,indx);
+eig_vect=eig_vect(:,indx);
+
+%considering first 'k' eigen vectors for clustering
 U=eig_vect(:,1:K);
 
 %Normalising the row to norm 1
