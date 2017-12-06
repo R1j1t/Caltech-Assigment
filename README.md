@@ -1,9 +1,9 @@
 # Caltech Assigment
 
 
-These are my solutions to the asisgnment-1 of Data analysis class. The Professor
+These are my solutions to the asisgnment-1 of Data analysis class. Professor
 of the course is Prof [Andrew Staurt](http://stuart.caltech.edu)
 
-The report i have submitted for evalution, was done by analysing by code from my
-intial commit. Hence If you find any diffence between the observed value and 
-output in report then its highly likely that its becuase of this reason.
+The report I have submitted for evalution was done based on the codes from my
+intial commit. Hence if you find any diffence between report and values obtained from the code, 
+then its highly likely that its becuase of these changes in the code.
