@@ -1,8 +1,7 @@
-# Caltech Assigment
+# Caltech Assignment
 
 
-These are my solutions to the asisgnment-1 of Data analysis class. Professor
-of the course is Prof [Andrew Staurt](http://stuart.caltech.edu)
+These are my solutions to the assignment-1 of Data analysis class taught by Prof [Andrew Staurt](http://stuart.caltech.edu)
 
 The report I have submitted for evalution was done based on the codes from my
 intial commit. Hence if you find any diffence between report and values obtained from the code, 
